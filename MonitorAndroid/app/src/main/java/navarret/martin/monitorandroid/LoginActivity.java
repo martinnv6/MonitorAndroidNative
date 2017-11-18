@@ -11,6 +11,7 @@ import android.app.LoaderManager.LoaderCallbacks;
 import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.analytics.Analytics;
 import com.microsoft.appcenter.crashes.Crashes;
+import com.microsoft.appcenter.distribute.Distribute;
 
 import android.content.CursorLoader;
 import android.content.Loader;
@@ -68,7 +69,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         AppCenter.start(getApplication(), "28a7d7ae-e80e-4faa-9f63-d15036937121",
-                Analytics.class, Crashes.class);
+                Analytics.class, Crashes.class, Distribute.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         // Set up the login form.
